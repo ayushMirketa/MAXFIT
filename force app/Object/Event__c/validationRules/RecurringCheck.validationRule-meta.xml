@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurringCheck</fullName>
+    <active>true</active>
+    <description>If recurring is checked then must fill frequency fields</description>
+    <errorConditionFormula>OR(AND ( Recurring__c =True,ISPICKVAL( Frequency__c,&quot;&quot;)) ,AND( Recurring__c =False , NOT(ISPICKVAL( Frequency__c,&quot;&quot;))))</errorConditionFormula>
+    <errorMessage>fill the frequency picklist field or check whether the recurring field is selected or not</errorMessage>
+</ValidationRule>
