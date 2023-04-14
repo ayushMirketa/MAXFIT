@@ -1,0 +1,18 @@
+<apex:page controller="SpeakerRegistration">
+    <apex:form >
+        <apex:pageBlock title="Speaker">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!speaker.Name}" />
+                <apex:inputField value="{!speaker.Email__c}" />
+                <apex:inputField value="{!speaker.Company__c}" />
+                <p> Events Name</p>
+                <apex:inputField value="{!event_speaker.Event__c}" />
+
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value=" Save" />
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page controller="AttendeeRegistration">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1" title="Attendee Location">
+
+                <apex:inputField value="{!location.Name}" />
+                <apex:inputField value="{!location.City__c}" />
+                <apex:inputField value="{!location.State__c}" />
+                <apex:inputField value="{!location.Postal_Code__c}" />
+                <apex:inputField value="{!location.Country__c}" />
+
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Attendee details">
+                <apex:inputField value="{!attendees.Name}" />
+                <apex:inputField value="{!attendees.Email__c}" />
+                <apex:inputField value="{!attendees.Phone__c}" />
+                <apex:inputField value="{!attendees.Company_Name__c}" />
+                <apex:inputField value="{!attendees.Address__c}" />
+                <apex:inputField value="{!event_attendees.Event__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
